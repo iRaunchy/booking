@@ -14,15 +14,18 @@ Used RestAssured library to create API calls for test data preconditions (Create
 ##### Verify positive search scenario
 
 1. Enter destination 'Los Angeles'
+
 Verify that suggestions dropdown appears.
 Verify that 'Los Angeles' is present in suggestions
 2. Select Check-In date in a date-picker as tomorrow
 3. Select Check-Out date in a date-picker as today + 30 days.
+
 Verify that the proper amount of nights displayed under dates
 4. Select how many adults as '2'
 5. Select how many children as 'No children'
 6. Select how many rooms as '1 room'
 7. Click 'Search' button
+
 Verify that some results found
 Verfiy that price displayed for correct amount of nights
 
