@@ -54,7 +54,7 @@ Used RestAssured library to create API calls for test data preconditions (Create
 
 6. Hover mouse on 'Im travelling for work' question icon.
 
-Verify that info tooltip appears.
+- Verify that info tooltip appears.
 
 7. Enter destination as "!$#!%!#%!#%"
 8. Click 'Search' button
