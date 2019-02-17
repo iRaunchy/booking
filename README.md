@@ -8,10 +8,12 @@ Used RestAssured library to create API calls for test data preconditions (Create
 - To verify test run results surefire reports can be used. Navigate to 'target/surefire-reports/' and open index.html
 - ScreenshotListener to create a screenshot on a test failure
 
+I combined some of test cases in one, since it's faster and easier to check them in one scenario.
 
 # TEST CASES
 
-##### Verify positive search scenario
+
+##### 1. Verify positive search scenario
 
 1. Enter destination 'Los Angeles'
 
@@ -31,7 +33,7 @@ Used RestAssured library to create API calls for test data preconditions (Create
 - Verify that some results found
 - Verfiy that price displayed for correct amount of nights
 
-##### Verify search validations scenario
+##### 2. Verify search validations scenario
 
 1. Select Check-In date in a date-picker as yesterday
 
@@ -67,7 +69,7 @@ Used RestAssured library to create API calls for test data preconditions (Create
 - Verify error message that destination is invalid.
 
 
-##### Verify positive search scenario - travel for work
+##### 3. Verify positive search scenario - travel for work
 
 1. Enter destination 'Los Angeles'
 
@@ -83,15 +85,16 @@ Used RestAssured library to create API calls for test data preconditions (Create
 7. Click 'Search' button
 
 - Verify that search results include features described for 'Im travelling for work option'.
+- Verify browser dev tools -> Network that parameter sb_travel_purpose = business in request
 
 
-##### Verify filters availability
+##### 4. Verify filters availability
 
 1. Check that all filter sections are present
 2. Check that all filter sub-sections are present.
 3. Check that all filters have counter beside them.
 
-##### Verify filters search general
+##### 5. Verify filters search general
 
 1. Fill all necessary fields for search
 2. Click 'Search' button
@@ -102,22 +105,33 @@ Used RestAssured library to create API calls for test data preconditions (Create
 6. Check out '1 star' filter
 - Verify that search result count decreased on the same amount
 
-#### The most important filters test cases
+#### The most important filters test cases (based on my assumptions, since have no real statistic)
 
-##### Verify budget filter
+##### 6. Verify budget filter
 
 1. Click on one of 'Your budget' filters 
 - Verify that the result counter equals to filter count
 - Verify that the results contains only prices within the range of a budget
 
-##### Verify Star Rating filter
+##### 7. Verify Star Rating filter
 
 1. Click on one of 'Star rating' filters (3-5 range as the most popular)
 - Verify that the result counter equals to filter count
 - Verify that the results contains only ratings equal to filter
 
+##### 8. Verify For business travelers filter
 
-##### Verify filters combinations
+1. Click on 'Breakfast included' filter in Business travellers filters section
+- Verify that the result counter equals to filter count
+- Verify that the results contains only properties with breakfast included
+
+##### 8. Verify only available properties filter
+
+1. Click on 'Show only available' filter in Availability filters section
+- Verify that the result counter equals to filter count
+- Verify that the results contains only available properties
+
+##### 9. Verify filters combinations
 
 1. Click on filter from 'Your budget'
 2. Click on filter from 'Star rating'
