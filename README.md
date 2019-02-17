@@ -86,18 +86,37 @@ Verify that info tooltip appears.
 2. Check that all filter sub-sections are present.
 3. Check that all filters have counter beside them.
 
-##### Verify filters counter
+##### Verify filters search general
 
-1. Click on any filter
+1. Fill all necessary fields for search
+2. Click 'Search' button
+3. Check the results count
+4. Check in all filters 
+- Verify that the results count is the same as without filters.
+5. Note the Star rating filter '1 star' counter 
+6. Check out '1 star' filter
+- Verify that search result count decreased on the same amount
 
-- Verify that the proper result found
-- Verify that the results counter equals to the counter displayed on filter.
+#### The most important filters test cases
+
+##### Verify budget filter
+
+1. Click on one of 'Your budget' filters 
+- Verify that the result counter equals to filter count
+- Verify that the results contains only prices within the range of a budget
+
+##### Verify Star Rating filter
+
+1. Click on one of 'Star rating' filters (3-5 range as the most popular)
+- Verify that the result counter equals to filter count
+- Verify that the results contains only ratings equal to filter
 
 
 ##### Verify filters combinations
 
-1. Click on filter from one section
-2. Click on filter from second section
+1. Click on filter from 'Your budget'
+2. Click on filter from 'Star rating'
 
+- Verify that the result count is equal to sum of counts of both filters
 - Verify that the result is a combination of both
 
