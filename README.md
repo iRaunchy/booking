@@ -35,7 +35,8 @@ I combined some of test cases in one, since it's faster and easier to check them
 
 ##### 2. Verify search validations scenario
 
-1. Select Check-In date in a date-picker as yesterday
+1. Check that it's impossile to manually enter dates for Check-In and Check-Out
+2. Select Check-In date in a date-picker as yesterday
 
 - Verify that the data is crossed out.
 - Verify that it is disabled and user is not able to pick it.
@@ -54,17 +55,17 @@ I combined some of test cases in one, since it's faster and easier to check them
 
 - Verify error message "Sorry, reservations for more than 30 nights are not possible."
 
-6. Hover mouse on 'Im travelling for work' question icon.
+8. Hover mouse on 'Im travelling for work' question icon.
 
 - Verify that info tooltip appears.
 
-7. Enter destination as "!$#!%!#%!#%"
-8. Click 'Search' button
+9. Enter destination as "!$#!%!#%!#%"
+10. Click 'Search' button
 
 - Verify error message that destination is invalid.
 
-7. Enter empty destination
-8. Click 'Search' button
+11. Enter empty destination
+12. Click 'Search' button
 
 - Verify error message that destination is invalid.
 
