@@ -17,10 +17,12 @@ Used RestAssured library to create API calls for test data preconditions (Create
 
 Verify that suggestions dropdown appears.
 Verify that 'Los Angeles' is present in suggestions
+
 2. Select Check-In date in a date-picker as tomorrow
 3. Select Check-Out date in a date-picker as today + 30 days.
 
 Verify that the proper amount of nights displayed under dates
+
 4. Select how many adults as '2'
 5. Select how many children as 'No children'
 6. Select how many rooms as '1 room'
@@ -35,20 +37,25 @@ Verfiy that price displayed for correct amount of nights
 
 Verify that the data is crossed out.
 Verify that it is disabled and user is not able to pick it.
+
 3. Select Check-Out date in a date-picker as yesterday.
 Verify that the data is crossed out.
 Verify that it is disabled and user is not able to pick it.
+
 4. Select Check-In date in a date-picker as today + 1 week.
 5. Select Check-Out date in a date-picker as today + 1 day.
 
 Verify that Check-Out date can't be prior Check-In date. And the data getting shift in proper order.
+
 6. Select Check-In date in a date-picker as today
 7. Select Check-Out date date in a date-picker as today +31 days
 
 Verify error message "Sorry, reservations for more than 30 nights are not possible."
+
 6. Hover mouse on 'Im travelling for work' question icon.
 
 Verify that info tooltip appears.
+
 7. Enter destination as "!$#!%!#%!#%"
 8. Click 'Search' button
 
@@ -61,6 +68,7 @@ Verify error message that destination is invalid.
 
 Verify that suggestions dropdown appears.
 Verify that 'Los Angeles' is present in suggestions
+
 2. Select Check-In date in a date-picker as tomorrow
 3. Select Check-Out date in a date-picker as today + 1 week.
 4. Select how many adults as '2'
