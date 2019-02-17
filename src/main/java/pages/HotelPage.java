@@ -42,8 +42,8 @@ public class HotelPage extends BasePage {
         return rooms.stream().map(element -> Integer.parseInt(element.getText().replaceAll(onlyDigitsRegEx, "").trim())).collect(Collectors.toList());
     }
 
-    public void clickReserve() {
-        WaitUtils.waitForElementVisibility(By.cssSelector(BOOKIN_TOTAL_PRICE_LOCATOR));
-        reservationButton.click();
+    public CheckoutPage clickReserve() {
+        moveToElementAndClick(reservationButton);
+        return initPage(CheckoutPage.class);
     }
 }

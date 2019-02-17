@@ -3,6 +3,7 @@ package utils;
 import framework.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
@@ -38,6 +39,12 @@ public class CommonUtils {
 
     public static <T> T getRandomItem(List<T> list) {
         return list.get(rand.nextInt(list.size()));
+    }
+
+    public static void moveToElementAndClick(WebElement element) {
+        Actions actions = new Actions(BasePage.driver);
+        actions.moveToElement(element).click();
+        actions.perform();
     }
 
     public static void refresh() {
