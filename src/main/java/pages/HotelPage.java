@@ -4,15 +4,14 @@ import framework.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.CommonUtils;
-import utils.WaitUtils;
 
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static java.util.Comparator.comparingInt;
-import static utils.CommonUtils.*;
+import static utils.CommonUtils.moveToElementAndClick;
+import static utils.CommonUtils.selectFromDropdownByValue;
 
 public class HotelPage extends BasePage {
 
