@@ -1,23 +1,25 @@
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pages.CheckoutPage;
 import pages.HotelPage;
 import pages.MainPage;
 import pages.SearchResultsPage;
-import utils.CommonUtils;
 
 import static framework.BasePage.initPage;
 import static framework.WindowsHandler.switchBetweenTabs;
-import static org.testng.Assert.*;
-import static utils.CommonUtils.*;
-import static utils.DateTimeUtils.*;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+import static utils.CommonUtils.getPageUrl;
+import static utils.DateTimeUtils.getCurrentDatePlusDays;
+import static utils.DateTimeUtils.getCurrentDatePlusMonths;
 
 public class BookingTest extends BaseTest {
 
     private MainPage mainPage;
     private SearchResultsPage searchResultsPage;
     private HotelPage hotelPage;
+    private CheckoutPage checkoutPage;
 
     @BeforeMethod(alwaysRun = true)
     public void before() {
@@ -33,9 +35,8 @@ public class BookingTest extends BaseTest {
         hotelPage = searchResultsPage.selectRandomTopHotel();
         switchBetweenTabs(1);
         hotelPage.selectCheapestRoom("1");
-        hotelPage.clickReserve();
-        assertTrue(getPageUrl().contains("secure.booking.com"), "Checkout page was not opened.");
-        System.out.println("test");
+        checkoutPage = hotelPage.clickReserve();
+        assertEquals(checkoutPage.getCurrentProgressTitle(), "Enter your details", "Checkout page was not opened.");
     }
 
 
