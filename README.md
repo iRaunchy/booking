@@ -29,6 +29,7 @@ Verfiy that price displayed for correct amount of nights
 ##### Verify search validations scenario
 
 1. Select Check-In date in a date-picker as yesterday
+
 Verify that the data is crossed out.
 Verify that it is disabled and user is not able to pick it.
 3. Select Check-Out date in a date-picker as yesterday.
@@ -36,20 +37,25 @@ Verify that the data is crossed out.
 Verify that it is disabled and user is not able to pick it.
 4. Select Check-In date in a date-picker as today + 1 week.
 5. Select Check-Out date in a date-picker as today + 1 day.
+
 Verify that Check-Out date can't be prior Check-In date. And the data getting shift in proper order.
 6. Select Check-In date in a date-picker as today
 7. Select Check-Out date date in a date-picker as today +31 days
+
 Verify error message "Sorry, reservations for more than 30 nights are not possible."
 6. Hover mouse on 'Im travelling for work' question icon.
+
 Verify that info tooltip appears.
 7. Enter destination as "!$#!%!#%!#%"
 8. Click 'Search' button
+
 Verify error message that destination is invalid.
 
 
 ##### Verify positive search scenario - travel for work
 
 1. Enter destination 'Los Angeles'
+
 Verify that suggestions dropdown appears.
 Verify that 'Los Angeles' is present in suggestions
 2. Select Check-In date in a date-picker as tomorrow
@@ -59,6 +65,7 @@ Verify that 'Los Angeles' is present in suggestions
 6. Select how many rooms as '1 room'
 7. Check in check 'Im travelling for work'
 7. Click 'Search' button
+
 Verify that search results include features described for 'Im travelling for work option'
 
 
@@ -71,6 +78,7 @@ Verify that search results include features described for 'Im travelling for wor
 ##### Verify filters counter
 
 1. Click on any filter
+
 Verify that the proper result found
 Verify that the results counter equals to the counter displayed on filter.
 
@@ -79,5 +87,6 @@ Verify that the results counter equals to the counter displayed on filter.
 
 1. Click on filter from one section
 2. Click on filter from second section
+
 Verify that the result is a combination of both
 
