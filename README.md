@@ -126,13 +126,13 @@ I combined some of test cases in one, since it's faster and easier to check them
 - Verify that the result counter equals to filter count
 - Verify that the results contains only properties with breakfast included
 
-##### 8. Verify only available properties filter
+##### 9. Verify only available properties filter
 
 1. Click on 'Show only available' filter in Availability filters section
 - Verify that the result counter equals to filter count
 - Verify that the results contains only available properties
 
-##### 9. Verify filters combinations
+##### 10. Verify filters combinations
 
 1. Click on filter from 'Your budget'
 2. Click on filter from 'Star rating'
