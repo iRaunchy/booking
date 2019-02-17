@@ -77,7 +77,7 @@ Verify that 'Los Angeles' is present in suggestions
 7. Check in check 'Im travelling for work'
 7. Click 'Search' button
 
-Verify that search results include features described for 'Im travelling for work option'
+Verify that search results include features described for 'Im travelling for work option'.
 
 
 ##### Verify filters availability
