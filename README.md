@@ -61,6 +61,11 @@ Used RestAssured library to create API calls for test data preconditions (Create
 
 - Verify error message that destination is invalid.
 
+7. Enter empty destination
+8. Click 'Search' button
+
+- Verify error message that destination is invalid.
+
 
 ##### Verify positive search scenario - travel for work
 
