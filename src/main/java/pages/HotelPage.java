@@ -4,6 +4,8 @@ import framework.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utils.CommonUtils;
+import utils.WaitUtils;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,7 +22,9 @@ public class HotelPage extends BasePage {
     @FindBy(css = ".hprt-price-price")
     List<WebElement> rooms;
 
+
     protected static final String ROOM_QTY_LOCATOR = "(//*[contains(@class, 'hprt-nos-select')])[%s]";
+    protected static final String BOOKIN_TOTAL_PRICE_LOCATOR = ".hprt-reservation-total-price";
 
 
     public void selectCheapestRoom(String qty) {
@@ -39,6 +43,7 @@ public class HotelPage extends BasePage {
     }
 
     public void clickReserve() {
+        WaitUtils.waitForElementVisibility(By.cssSelector(BOOKIN_TOTAL_PRICE_LOCATOR));
         reservationButton.click();
     }
 }

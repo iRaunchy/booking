@@ -10,6 +10,7 @@ import utils.CommonUtils;
 import static framework.BasePage.initPage;
 import static framework.WindowsHandler.switchBetweenTabs;
 import static org.testng.Assert.*;
+import static utils.CommonUtils.*;
 import static utils.DateTimeUtils.*;
 
 public class BookingTest extends BaseTest {
@@ -33,7 +34,7 @@ public class BookingTest extends BaseTest {
         switchBetweenTabs(1);
         hotelPage.selectCheapestRoom("1");
         hotelPage.clickReserve();
-        assertTrue(CommonUtils.getPageUrl().contains("secure.booking.com"), "Checkout page was not opened.");
+        assertTrue(getPageUrl().contains("secure.booking.com"), "Checkout page was not opened.");
         System.out.println("test");
     }
 
